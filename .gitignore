@@ -2,6 +2,8 @@ node_modules
 .next
 out
 *.db
+*.sqlite
+*.sqlite3
 *.db-journal
 .env
 .env.local
@@ -9,3 +11,14 @@ npm-debug.log*
 .DS_Store
 next-env.d.ts
 tsconfig.tsbuildinfo
+__pycache__/
+*.py[cod]
+*.egg-info/
+.coverage
+htmlcov/
+.pytest_cache/
+.vscode/
+.idea/
+venv/
+.venv/
+env/
