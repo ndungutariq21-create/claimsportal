@@ -18,15 +18,16 @@ const config: Config = {
           teal: "#1a8f87",
           ink: "#0b1a18",
         },
+        stackwire: {
+          blue: "#0a7bff",
+          navy: "#04153a",
+          orange: "#ff7a00",
+          cyan: "#35d9ff",
+        },
       },
       fontFamily: {
-        sans: [
-          "Roboto",
-          "Gotham",
-          "Helvetica Neue",
-          "Arial",
-          "sans-serif",
-        ],
+        sans: ["Inter", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
+        display: ["Sora", "Inter", "Helvetica Neue", "Arial", "sans-serif"],
       },
       boxShadow: {
         card: "0 1px 2px rgba(11,26,24,0.06), 0 1px 12px rgba(11,26,24,0.05)",

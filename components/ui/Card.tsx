@@ -36,7 +36,9 @@ export function SectionHeading({
   return (
     <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
       <div>
-        <h1 className="text-2xl font-extrabold text-brand-green">{title}</h1>
+        <h1 className="bg-gradient-to-r from-brand-green via-stackwire-blue to-brand-green bg-clip-text text-2xl font-extrabold text-transparent">
+          {title}
+        </h1>
         {subtitle && <p className="mt-1 text-sm text-black/50">{subtitle}</p>}
       </div>
       {action}

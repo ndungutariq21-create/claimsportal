@@ -6,6 +6,7 @@ import { Logo } from "./Logo";
 import type { Role } from "@/lib/types";
 import { ROLE_LABELS } from "@/lib/types";
 import { logoutAction } from "@/app/actions/auth";
+import { StackwireBand } from "./StackwireBand";
 
 export function AppShell({
   role,
@@ -21,17 +22,17 @@ export function AppShell({
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#f4f7f6]">
+    <div className="app-frame min-h-screen">
       <div className="flex min-h-screen">
         <aside
-          className={`fixed inset-y-0 left-0 z-30 w-64 transform bg-brand-green text-white transition-transform md:relative md:translate-x-0 ${
+          className={`app-sidebar fixed inset-y-0 left-0 z-30 w-64 transform text-white transition-transform md:relative md:translate-x-0 ${
             navOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
           <div className="flex h-full flex-col p-5">
             <div className="border-b border-white/15 pb-5">
               <Logo variant="white" size={26} />
-              <p className="mt-2 text-[11px] italic text-white/60">You Are Definitely Covered</p>
+              <p className="mt-2 text-[11px] italic text-white/70">You Are Definitely Covered</p>
             </div>
 
             <div className="mt-5 rounded-lg bg-white/10 px-3 py-2.5">
@@ -62,6 +63,9 @@ export function AppShell({
                 Sign Out
               </button>
             </form>
+            <p className="mt-5 border-t border-white/15 pt-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
+              Enterprise systems by Stackwire
+            </p>
           </div>
         </aside>
 
@@ -74,7 +78,7 @@ export function AppShell({
         )}
 
         <div className="flex min-h-screen flex-1 flex-col">
-          <header className="flex items-center gap-3 border-b-[3px] border-brand-red bg-white px-4 py-3 md:px-8">
+          <header className="app-header flex items-center gap-3 px-4 py-3 md:px-8">
             <button
               className="rounded-md border border-black/10 p-2 md:hidden"
               onClick={() => setNavOpen((v) => !v)}
@@ -90,6 +94,7 @@ export function AppShell({
               </svg>
             </button>
             <Logo size={20} />
+            <StackwireBand className="ml-auto" />
           </header>
 
           <main className="flex-1 animate-slide-up px-4 py-6 motion-reduce:animate-none md:px-8 md:py-8">

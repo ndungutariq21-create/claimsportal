@@ -69,20 +69,20 @@ export function LoginForm() {
       <div className="card animate-fade-in bg-brand-green-10/60 p-6">
         <p className="mb-3 text-sm font-semibold text-brand-green">Demo accounts — one per role</p>
         <div className="max-h-80 overflow-y-auto rounded-lg border border-black/5">
-          <table className="w-full text-left text-xs">
+          <table className="w-full table-fixed text-left text-[11px]">
             <thead className="sticky top-0 bg-white">
               <tr className="text-black/50">
-                <th className="px-3 py-2 font-semibold">Role</th>
-                <th className="px-3 py-2 font-semibold">Email</th>
-                <th className="px-3 py-2 font-semibold">Password</th>
+                <th className="w-[28%] px-2 py-2 font-semibold">Role</th>
+                <th className="w-[40%] px-2 py-2 font-semibold">Email</th>
+                <th className="w-[32%] px-2 py-2 font-semibold">Password</th>
               </tr>
             </thead>
             <tbody>
               {DEMO_ROWS.map((r) => (
                 <tr key={r.email} className="border-t border-black/5 bg-white/70">
                   <td className="px-3 py-1.5 font-medium text-brand-ink">{r.role}</td>
-                  <td className="px-3 py-1.5 font-mono text-brand-green">{r.email}</td>
-                  <td className="px-3 py-1.5 font-mono">{r.password}</td>
+                  <td className="break-all px-2 py-1.5 font-mono text-brand-green">{r.email}</td>
+                  <td className="break-all px-2 py-1.5 font-mono">{r.password}</td>
                 </tr>
               ))}
             </tbody>
