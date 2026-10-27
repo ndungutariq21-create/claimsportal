@@ -15,7 +15,11 @@ body {
 
 @layer components {
   .card {
-    @apply rounded-xl2 border border-black/5 bg-white shadow-card;
+    @apply rounded-xl2 border border-black/5 bg-white shadow-card transition-all duration-200 ease-out;
+  }
+
+  .card:hover {
+    @apply -translate-y-0.5 shadow-popover;
   }
 
   .badge {
@@ -23,7 +27,7 @@ body {
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-150 ease-out hover:-translate-y-px active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-50;
   }
   .btn-primary {
     @apply btn bg-brand-red text-white hover:bg-brand-red-dark;
@@ -39,8 +43,12 @@ body {
     @apply mb-1 block text-xs font-semibold uppercase tracking-wide text-black/50;
   }
   .field-input {
-    @apply w-full rounded-lg border border-black/10 bg-white px-3 py-2 text-sm text-brand-ink placeholder:text-black/30 focus:border-brand-green focus:outline-none focus:ring-2 focus:ring-brand-green/20;
+    @apply w-full rounded-lg border border-black/10 bg-white px-3 py-2 text-sm text-brand-ink placeholder:text-black/30 transition-shadow duration-150 focus:border-brand-green focus:outline-none focus:ring-2 focus:ring-brand-green/20;
   }
+}
+
+a {
+  @apply transition-colors duration-150;
 }
 
 ::-webkit-scrollbar {
@@ -53,4 +61,15 @@ body {
 }
 ::-webkit-scrollbar-track {
   background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
