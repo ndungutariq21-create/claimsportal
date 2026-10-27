@@ -22,3 +22,4 @@ htmlcov/
 venv/
 .venv/
 env/
+.vercel
