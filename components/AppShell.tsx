@@ -32,7 +32,7 @@ export function AppShell({
           <div className="flex h-full flex-col p-5">
             <div className="border-b border-white/15 pb-5">
               <Logo variant="white" size={26} />
-              <p className="mt-2 text-[11px] italic text-white/70">You Are Definitely Covered</p>
+              <p className="mt-2 text-[11px] text-white/70">Enterprise claims management</p>
             </div>
 
             <div className="mt-5 rounded-lg bg-white/10 px-3 py-2.5">
@@ -58,7 +58,7 @@ export function AppShell({
             <form action={logoutAction}>
               <button
                 type="submit"
-                className="mt-4 w-full rounded-lg bg-brand-red px-3 py-2.5 text-sm font-bold tracking-wide text-white hover:bg-brand-red-dark"
+                className="mt-4 w-full rounded-lg bg-stackwire-blue px-3 py-2.5 text-sm font-bold tracking-wide text-white hover:bg-blue-700"
               >
                 Sign Out
               </button>

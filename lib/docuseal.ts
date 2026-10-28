@@ -5,7 +5,7 @@ import type { ClaimFormKey, DocusealWorkflow } from "./types";
 // DocuSeal integration — self-hosted e-signature.
 //
 // Configure via env vars (see .env.example):
-//   DOCUSEAL_HOST     e.g. docuseal.definiteassurance.co.ke (no protocol/slash)
+//   DOCUSEAL_HOST     e.g. https://docuseal.example.com (no trailing slash)
 //   DOCUSEAL_API_KEY  from DocuSeal → Settings → API
 //   DOCUSEAL_TEMPLATE_<WORKFLOW>  numeric template id per document type
 //

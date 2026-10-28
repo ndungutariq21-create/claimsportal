@@ -6,17 +6,17 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          green: "#0f4f48",
-          "green-70": "#3e756f",
-          "green-30": "#a8c7c4",
-          "green-10": "#e5f0ef",
-          "green-dark": "#0a3733",
-          red: "#eb2229",
-          "red-70": "#f17075",
-          "red-10": "#fce8e9",
-          "red-dark": "#c41e24",
-          teal: "#1a8f87",
-          ink: "#0b1a18",
+          green: "#0a7bff",
+          "green-70": "#63adff",
+          "green-30": "#b9ddff",
+          "green-10": "#e8f4ff",
+          "green-dark": "#0058c9",
+          red: "#dc2626",
+          "red-70": "#f87171",
+          "red-10": "#fee2e2",
+          "red-dark": "#b91c1c",
+          teal: "#35d9ff",
+          ink: "#04153a",
         },
         stackwire: {
           blue: "#0a7bff",

@@ -32,8 +32,8 @@ h6 {
 .login-page {
   background:
     radial-gradient(ellipse at 8% 12%, rgba(10, 123, 255, 0.1), transparent 34rem),
-    radial-gradient(ellipse at 94% 8%, rgba(235, 34, 41, 0.075), transparent 30rem),
-    radial-gradient(ellipse at 70% 95%, rgba(15, 79, 72, 0.09), transparent 34rem),
+    radial-gradient(ellipse at 94% 8%, rgba(255, 122, 0, 0.075), transparent 30rem),
+    radial-gradient(ellipse at 70% 95%, rgba(53, 217, 255, 0.09), transparent 34rem),
     #f5f8ff;
   background-attachment: fixed;
 }
@@ -65,10 +65,10 @@ h6 {
     @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-150 ease-out hover:-translate-y-px active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-50;
   }
   .btn-primary {
-    @apply btn bg-brand-red text-white hover:bg-brand-red-dark;
+    @apply btn bg-stackwire-blue text-white hover:bg-blue-700;
   }
   .btn-secondary {
-    @apply btn bg-brand-green text-white hover:bg-brand-green-dark;
+    @apply btn bg-stackwire-navy text-white hover:bg-slate-800;
   }
   .btn-ghost {
     @apply btn border border-black/10 bg-white text-brand-ink hover:bg-black/[0.03];
@@ -78,7 +78,7 @@ h6 {
     @apply mb-1 block text-xs font-semibold uppercase tracking-wide text-black/50;
   }
   .field-input {
-    @apply w-full rounded-lg border border-black/10 bg-white px-3 py-2 text-sm text-brand-ink placeholder:text-black/30 transition-shadow duration-150 focus:border-brand-green focus:outline-none focus:ring-2 focus:ring-brand-green/20;
+    @apply w-full rounded-lg border border-black/10 bg-white px-3 py-2 text-sm text-brand-ink placeholder:text-black/30 transition-shadow duration-150 focus:border-stackwire-blue focus:outline-none focus:ring-2 focus:ring-stackwire-blue/20;
   }
 }
 
@@ -87,7 +87,7 @@ h6 {
   overflow: hidden;
   background:
     radial-gradient(ellipse at 5% 0%, rgba(53, 217, 255, 0.16), transparent 45%),
-    linear-gradient(155deg, #04153a 0%, #0b3547 42%, #0f4f48 100%);
+    linear-gradient(155deg, #04153a 0%, #0b2854 42%, #0a7bff 100%);
   box-shadow: 12px 0 36px rgba(4, 21, 58, 0.14);
 }
 
@@ -97,7 +97,7 @@ h6 {
   right: 0;
   bottom: 0;
   width: 3px;
-  background: linear-gradient(180deg, var(--stackwire-cyan), var(--stackwire-blue) 36%, #eb2229 78%);
+  background: linear-gradient(180deg, var(--stackwire-cyan), var(--stackwire-blue) 55%, var(--stackwire-orange));
   content: "";
   opacity: 0.9;
 }
@@ -115,7 +115,7 @@ h6 {
   position: absolute;
   inset: 0 0 auto;
   height: 3px;
-  background: linear-gradient(90deg, var(--stackwire-blue), var(--stackwire-cyan) 48%, #eb2229);
+  background: linear-gradient(90deg, var(--stackwire-blue), var(--stackwire-cyan) 48%, var(--stackwire-orange));
   content: "";
 }
 
@@ -190,7 +190,7 @@ a {
   height: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(15, 79, 72, 0.25);
+  background: rgba(10, 123, 255, 0.25);
   border-radius: 999px;
 }
 ::-webkit-scrollbar-track {

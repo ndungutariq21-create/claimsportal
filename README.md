@@ -1,4 +1,4 @@
-# Definite Assurance — Claims Portal (v4.0)
+# Claims Portal | Stackwire Ltd
 
 A ground-up revamp of the claims portal: **Next.js 14 (App Router) + TypeScript +
 Tailwind**, a normalized **SQLite** data layer, 220 generated demo claims across
@@ -10,9 +10,10 @@ Stackwire "Proposed Claims Portal Workflow Design" document supplied for this
 build.
 
 The original app (`babaketee/claimsportal`) was a Python/Streamlit application.
-This revamp keeps the same domain model, roles, demo accounts and brand identity,
-but rebuilds the frontend as a proper multi-user web app so DocuSeal's React SDK
-(`@docuseal/react`) can be used natively — Streamlit has no React runtime.
+This revamp keeps the same domain model, roles and demo accounts, removes the
+insurer-specific branding, and rebuilds the frontend as a Stackwire-branded
+multi-user web app so DocuSeal's React SDK (`@docuseal/react`) can be used
+natively — Streamlit has no React runtime.
 
 ## What's new in v4.0
 
@@ -23,7 +24,7 @@ design document, on top of everything already in v3:
    the design document (`lib/types.ts` → `ClaimStatus`, `LIFECYCLE_STAGES`).
    Every claim shows its current stage and an **immutable status-history audit
    trail** on a new **Lifecycle** tab.
-2. **7 real Definite Assurance claim forms, DocuSeal-fillable.** The Motor
+2. **7 claim forms, DocuSeal-fillable.** The Motor
    Accident, Windscreen, All Risks, Personal Baggage/Property Loss, WIBA,
    Personal Accident and Notification-of-Incident (investigator) forms you
    supplied were transcribed field-for-field into `lib/claim-forms.ts` and are
@@ -69,8 +70,7 @@ design document, on top of everything already in v3:
 ## Stack
 
 - **Next.js 14** (App Router, Server Components, Server Actions) + TypeScript
-- **Tailwind CSS**, themed to the Definite Assurance brand (Aberdare Green
-  `#0f4f48`, Uhuru Red `#eb2229`)
+- **Tailwind CSS**, themed to Stackwire's navy, blue, cyan and orange palette
 - **better-sqlite3** — a single-file `data/claims.db`, zero external services
   required to run the demo
 - **iron-session** — encrypted, httpOnly cookie sessions (swap for real
@@ -202,7 +202,7 @@ Upload a document from any claim's **Documents** tab and the app will:
 ## The 7 claim forms, via DocuSeal
 
 `lib/claim-forms.ts` holds structured field/section definitions transcribed
-from the 7 uploaded Definite Assurance forms, each mapped to the claim types
+from the 7 supplied claim forms, each mapped to the claim types
 it covers:
 
 | Form | Claim types |

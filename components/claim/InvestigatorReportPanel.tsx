@@ -16,7 +16,7 @@ export function InvestigatorReportPanel({
       <div>
         <p className="text-sm font-bold text-brand-ink">Notification of Incident (Investigator)</p>
         <p className="mt-1 text-xs text-black/55">
-          The 7th Definite Assurance claim form — filed by the assigned investigator, not the client.
+          The investigator&apos;s incident report — filed by the assigned investigator, not the client.
           Its Fraud-Risk &amp; Report Log feeds directly into the fraud-screening engine.
         </p>
       </div>

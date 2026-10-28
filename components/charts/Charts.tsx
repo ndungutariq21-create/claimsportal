@@ -14,7 +14,7 @@ import {
   Legend,
 } from "recharts";
 
-const COLORWAY = ["#0f4f48", "#eb2229", "#3e756f", "#f17075", "#a8c7c4", "#1a8f87", "#c41e24", "#e5f0ef"];
+const COLORWAY = ["#04153a", "#0a7bff", "#35d9ff", "#ff7a00", "#4b61a8", "#3a9df5", "#ffab5e", "#8bdfff"];
 
 export function StatusBarChart({ data }: { data: { status: string; n: number }[] }) {
   return (
@@ -32,7 +32,7 @@ export function StatusBarChart({ data }: { data: { status: string; n: number }[]
         <YAxis tick={{ fontSize: 11, fill: "#555" }} allowDecimals={false} />
         <Tooltip
           contentStyle={{ borderRadius: 10, borderColor: "#e0e0e0", fontSize: 12 }}
-          labelStyle={{ fontWeight: 700, color: "#0f4f48" }}
+          labelStyle={{ fontWeight: 700, color: "#04153a" }}
         />
         <Bar dataKey="n" name="Claims" radius={[6, 6, 0, 0]}>
           {data.map((_, i) => (
@@ -77,7 +77,7 @@ export function ClaimTypeBarChart({ data }: { data: { claim_type: string; n: num
           tick={{ fontSize: 11, fill: "#555" }}
         />
         <Tooltip contentStyle={{ borderRadius: 10, borderColor: "#e0e0e0", fontSize: 12 }} />
-        <Bar dataKey="n" name="Claims" fill="#0f4f48" radius={[0, 6, 6, 0]} />
+        <Bar dataKey="n" name="Claims" fill="#0a7bff" radius={[0, 6, 6, 0]} />
       </BarChart>
     </ResponsiveContainer>
   );

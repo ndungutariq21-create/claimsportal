@@ -19,7 +19,7 @@ export default async function LoginPage() {
         </div>
         <LoginForm />
         <p className="mt-6 text-center text-xs text-black/40">
-          Definite Assurance Co. Ltd — Claims Portal v3.0 (revamp) · Demo environment
+          Stackwire Ltd · Claims Portal · Demo environment
         </p>
       </div>
     </main>

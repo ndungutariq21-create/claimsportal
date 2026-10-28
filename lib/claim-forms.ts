@@ -1,7 +1,7 @@
 import type { ClaimFormKey } from "./types";
 
 // ---------------------------------------------------------------------------
-// Structured definitions of the 7 real Definite Assurance claim forms
+// Structured definitions of the seven claim forms
 // supplied by the client, used to:
 //   1. render the client-facing claim-submission form (Stage 3/4) with the
 //      real fields from the paper form, per claim type;
@@ -43,7 +43,7 @@ const consentSection: ClaimFormSection = {
     {
       name: "consent_processing",
       label:
-        "I/We have read and understood the Privacy Notice and consent to Definite Assurance collecting, using, storing and processing my/our personal data (including sensitive data such as health information, where applicable) for underwriting, claims and settlement purposes.",
+        "I/We have read and understood the Privacy Notice and consent to the insurer collecting, using, storing and processing my/our personal data (including sensitive data such as health information, where applicable) for underwriting, claims and settlement purposes.",
       type: "select",
       options: ["Agree"],
       required: true,
@@ -59,7 +59,7 @@ const consentSection: ClaimFormSection = {
     {
       name: "consent_contact",
       label:
-        "I/We consent to Definite Assurance contacting me/us about this and related products and services by email, SMS, telephone and post.",
+        "I/We consent to the insurer contacting me/us about this and related products and services by email, SMS, telephone and post.",
       type: "select",
       options: ["Agree", "Decline"],
       required: true,
@@ -366,9 +366,9 @@ export const FORM_DEFINITIONS: Record<ClaimFormKey, ClaimFormDefinition> = {
   general_claim: {
     key: "general_claim",
     title: "General Claim Declaration & Consent Form",
-    sourceDocument: "Definite Assurance — standard claim declaration (no specific paper form supplied for this class)",
+    sourceDocument: "Standard claim declaration (no specific paper form supplied for this class)",
     description:
-      "Used for classes not yet covered by a dedicated paper form (e.g. business interruption, public liability). Captures the standard declaration and DPA 2019 consent common to every Definite Assurance claim form.",
+      "Used for classes not yet covered by a dedicated paper form (e.g. business interruption, public liability). Captures the standard declaration and DPA 2019 consent common to all claim forms.",
     sections: [
       {
         title: "Claim Declaration",
