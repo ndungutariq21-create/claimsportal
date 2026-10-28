@@ -20,6 +20,13 @@ export function AppShell({
   children: React.ReactNode;
 }) {
   const [navOpen, setNavOpen] = useState(false);
+  const initials = fullName
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
 
   return (
     <div className="app-frame min-h-screen">
@@ -55,14 +62,6 @@ export function AppShell({
               </Link>
             </nav>
 
-            <form action={logoutAction}>
-              <button
-                type="submit"
-                className="mt-4 w-full rounded-lg bg-stackwire-blue px-3 py-2.5 text-sm font-bold tracking-wide text-white hover:bg-blue-700"
-              >
-                Sign Out
-              </button>
-            </form>
             <p className="mt-5 border-t border-white/15 pt-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
               Enterprise systems by Stackwire
             </p>
@@ -94,7 +93,51 @@ export function AppShell({
               </svg>
             </button>
             <Logo size={20} />
-            <StackwireBand className="ml-auto" />
+            <div className="ml-auto flex items-center gap-2 sm:gap-3">
+              <StackwireBand className="hidden xl:inline-flex" />
+              <details className="relative">
+                <summary className="flex cursor-pointer list-none items-center gap-2 rounded-lg border border-black/10 bg-white/70 py-1.5 pl-1.5 pr-3 text-left hover:bg-white">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-stackwire-navy text-xs font-bold text-white">
+                    {initials}
+                  </span>
+                  <span className="hidden max-w-36 sm:block">
+                    <span className="block truncate text-xs font-semibold text-stackwire-navy">
+                      {fullName}
+                    </span>
+                    <span className="block text-[10px] text-black/50">Profile</span>
+                  </span>
+                  <span className="sr-only sm:hidden">Profile</span>
+                  <svg
+                    aria-hidden="true"
+                    className="h-4 w-4 text-black/50"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.09 1.03l-4.25 4.5a.75.75 0 01-1.09 0l-4.25-4.5a.75.75 0 01.02-1.05z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </summary>
+                <div className="absolute right-0 z-40 mt-2 w-64 rounded-xl border border-black/10 bg-white p-4 shadow-popover">
+                  <p className="text-sm font-semibold text-stackwire-navy">{fullName}</p>
+                  <p className="mt-1 break-all text-xs text-black/55">{email}</p>
+                  <p className="mt-3 border-t border-black/5 pt-3 text-xs font-medium text-black/65">
+                    {ROLE_LABELS[role]}
+                  </p>
+                </div>
+              </details>
+              <form action={logoutAction}>
+                <button
+                  type="submit"
+                  className="rounded-lg bg-stackwire-blue px-3 py-2 text-xs font-bold text-white transition-colors hover:bg-blue-700 sm:px-4 sm:text-sm"
+                >
+                  <span className="sm:hidden">Log out</span>
+                  <span className="hidden sm:inline">Sign Out</span>
+                </button>
+              </form>
+            </div>
           </header>
 
           <main className="flex-1 animate-slide-up px-4 py-6 motion-reduce:animate-none md:px-8 md:py-8">
